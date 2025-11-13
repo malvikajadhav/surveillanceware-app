@@ -259,9 +259,9 @@ function App() {
           zoomControl={true}
         >
           <TileLayer
-            url="https://tiles.stadiamaps.com/tiles/stamen_terrain/{z}/{x}/{y}{r}.png"
-            attribution='&copy; <a href="https://stadiamaps.com/">Stadia Maps</a> &copy; <a href="https://stamen.com">Stamen Design</a>'
-          />      
+  url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+  attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+/>     
           {result && (
             <>
               <Marker position={[result.trajectory[0].lat, result.trajectory[0].lon]}>
