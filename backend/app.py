@@ -12,7 +12,14 @@ logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
 app = Flask(__name__)
-CORS(app)
+CORS(app, resources={
+    r"/api/*": {
+        "origins": [
+            "https://surveillanceware-app.vercel.app/",  # Replace with YOUR Vercel URL
+            "http://localhost:5173"  # Keep for local testing
+        ]
+    }
+})
 
 # Global generator instance
 generator = None
