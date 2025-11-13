@@ -12,12 +12,16 @@ logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
 app = Flask(__name__)
+
+# Configure CORS to allow Vercel frontend
 CORS(app, resources={
     r"/api/*": {
         "origins": [
-            "https://surveillanceware-app.vercel.app",  # Replace with YOUR Vercel URL
-            "http://localhost:5173"  # Keep for local testing
-        ]
+            "https://surveillanceware-app.vercel.app",
+            "http://localhost:5173"
+        ],
+        "methods": ["GET", "POST", "OPTIONS"],
+        "allow_headers": ["Content-Type"]
     }
 })
 
