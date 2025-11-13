@@ -125,7 +125,7 @@ def predict_trajectory():
                 }), 404
         else:
             # Use first user if none specified
-            user_id = list(generator.user_transitions.keys())[153]
+            user_id = list(generator.user_transitions.keys())[1]
             logger.info(f"No user_id provided, using default user: {user_id}")
         
         # Generate trajectory
