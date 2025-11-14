@@ -22,12 +22,12 @@ const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000'
 function App() {
   const [sidebarOpen, setSidebarOpen] = useState(false)
   const [formData, setFormData] = useState({
-    start_lat: '39.922316',
-    start_lon: '116.471737',
-    end_lat: '39.907736',
-    end_lon: '116.471373',
-    start_time: '2025-01-15T00:00',
-    end_time: '2025-01-15T01:00'
+    start_lat: '39.976456',
+    start_lon: '116.372623',
+    end_lat: '39.944736',
+    end_lon: '116.317087',
+    start_time: '2025-01-15T20:00',
+    end_time: '2025-01-15T20:30'
   })
   
   const [result, setResult] = useState(null)
